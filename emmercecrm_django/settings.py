@@ -3,6 +3,19 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Celery settings
+CELERY_BROKER_URL = 'redis://localhost:6379/0'  # Redis broker
+CELERY_ACCEPT_CONTENT = ['json']               # Accepted content formats
+CELERY_TASK_SERIALIZER = 'json'                # Serialize tasks in JSON format
+CELERY_RESULT_BACKEND = 'django-db'            # Store results in the database
+CELERY_TIMEZONE = 'UTC'
+
+# Celery Beat settings (optional, for periodic tasks)
+INSTALLED_APPS += [
+    'django_celery_beat',
+    'django_celery_results',
+]
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
