@@ -51,7 +51,7 @@ CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_BACKEND = 'django-db'
 
-ALLOWED_HOSTS = ['emmerce_django.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['emmerce_django.onrender.com', '35.160.120.126, 44.233.151.27, 34.211.200.85']
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
