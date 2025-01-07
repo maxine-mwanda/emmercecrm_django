@@ -29,8 +29,9 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8000',
+    'https://emmerce-crm.web.app'
 ]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -56,3 +57,11 @@ ALLOWED_HOSTS = ['emmerce_django.onrender.com', '35.160.120.126, 44.233.151.27, 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+INSTALLED_APPS += [
+    'corsheaders',
+]
+
+MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    *MIDDLEWARE,
+]
