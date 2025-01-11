@@ -3,9 +3,9 @@ import os
 from celery import Celery
 
 # Set the default Django settings module for the 'celery' program.
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'crm_project.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'emercecrm_django.settings')
 
-app = Celery('crm_project')
+app = Celery('emmercecrm_django')
 
 # Using a string here means the worker doesn't have to serialize
 # the configuration object to child processes.
