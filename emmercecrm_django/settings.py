@@ -12,6 +12,14 @@ CELERY_TIMEZONE = 'UTC'
 
 # Celery Beat settings (optional, for periodic tasks)
 INSTALLED_APPS += [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'rest_framework',
+    'leads',
     'django_celery_beat',
     'django_celery_results',
 ]
@@ -58,6 +66,15 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 INSTALLED_APPS += [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'rest_framework',
+    'leads',
+    'django_celery_results',
     'corsheaders',
 ]
 
