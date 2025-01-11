@@ -3,7 +3,7 @@ import os
 from celery import Celery
 
 # Set the default Django settings module for the 'celery' program.
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'emercecrm_django.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'emmercecrm_django.settings')
 
 app = Celery('emmercecrm_django')
 
